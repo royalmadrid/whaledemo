@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - 
-        name: Checkout
+        name: Checkout Repo
         uses: actions/checkout@v2
       -       
         name: Set up Docker Buildx
@@ -42,7 +42,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ghcr.io/usha-mandya/simplewhale:latest
+          tags: ghcr.io/{{ github.repository_owner }}/simplewhale:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
       -
