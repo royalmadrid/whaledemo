@@ -1,4 +1,4 @@
-name: CI to Docker Hub 
+name: CI to GHCR  
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.ghcr_TOKEN }}
+          password: ${{ secrets.GHCR_TOKEN }}
 
       - 
         name: Cache Docker layers
