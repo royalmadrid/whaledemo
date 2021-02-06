@@ -33,7 +33,7 @@ jobs:
           context: ./ 
           file: ./Dockerfile
           push: true
-          tags: royalmadrid/whaledemo:latest
+          tags: ushamandya/simplewhale:latest
 
       -
         name: Image digest
