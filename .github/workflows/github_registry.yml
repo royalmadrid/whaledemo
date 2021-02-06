@@ -33,6 +33,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.ghcr_TOKEN }}
+            
       -
         name: Build and push
         id: docker_build
